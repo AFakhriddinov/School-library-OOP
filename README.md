@@ -12,7 +12,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
   - [Presentation](#presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -53,11 +52,6 @@ School Library app was built with object-oriented programming principles and all
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Live Demo <a name="live-demo"></a>
-
-N/A
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
