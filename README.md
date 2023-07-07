@@ -78,7 +78,7 @@ cd School-library-OOP
 ### Install
 
 Install this project with:
-RubyInstaller
+bundle install
 
 ### Usage
 
