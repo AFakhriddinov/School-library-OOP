@@ -77,7 +77,8 @@ cd School-library-OOP
 
 ### Install
 
-npm install
+Install this project with:
+RubyInstaller
 
 ### Usage
 
@@ -85,7 +86,7 @@ Use this project in the browsers of desktops and mobile devices
 
 ### Run tests
 
-npm test
+rubocop
 
 ### Deployment
 
