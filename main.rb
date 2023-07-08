@@ -13,7 +13,7 @@ def list_options
     '
 end
 
-def options(option, app) # rubocop:todo Metrics/CyclomaticComplexity
+def options(option, app)
   case option
   when 1
     add_book(app)
