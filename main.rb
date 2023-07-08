@@ -1,10 +1,23 @@
-require './person'
-require './trim_decorator'
-require './capitalize_decorator'
+require_relative 'app'
 
-person = Person.new(22, name: 'maximilianus')
-person.correct_name
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
+def main
+  puts "\nWelcome to School Library App!\n"
+
+  app = App.new
+  choices = {
+    1 => :list_books,
+    2 => :list_people,
+    3 => :create_person,
+    4 => :create_book,
+    5 => :create_rental,
+    6 => :list_rentals,
+    7 => :quit
+  }
+
+  loop do
+    option = app.options
+    app.send(choices[option])
+  end
+end
+
+main

@@ -1,3 +1,4 @@
+# Represents a classroom with attributes such as label and students
 class Classroom
   attr_accessor :label
   attr_reader :students
@@ -8,7 +9,7 @@ class Classroom
   end
 
   def add_student(student)
-    @students << student
+    students << student
     student.classroom = self
   end
 end
