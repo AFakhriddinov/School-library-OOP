@@ -3,16 +3,18 @@ require './person'
 class Student < Person
   attr_reader :classroom
 
-  def initialize(age, _classroom:, parent_permission: true, name: 'Unknown')
-    super(age, parent_permission: parent_permission, name: name)
+  def initialize(classroom, age, parent_permission, name = 'unknown')
+    super(age, parent_permission, name)
+    @classroom = classroom
+  end
+
+  def classroom=(classroom)
+    @classroom = classroom
+    classroom.students.push(self) unless classroom.students.includes?(self)
   end
 
   def play_hooky
     '¯\\(ツ)/¯'
   end
 
-  def classroom=(classroom)
-    @classroom = classroom
-    classroom.students << self unless classroom.students.include?(self)
-  end
 end
