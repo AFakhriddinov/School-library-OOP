@@ -8,24 +8,25 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [� Table of Contents](#-table-of-contents)
+- [📖 School-library-OOP ](#-school-library-oop-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -50,7 +51,6 @@ School Library app was built with object-oriented programming principles and all
 - Basic set up
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -100,7 +100,11 @@ N/A
 - Facebook: [@facebookhandle](https://www.facebook.com/abdulaziz.faxriddinov)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/afakhriddinov/)
 
+👤 **Mohamed Sabry**
 
+- GitHub: [@mohamedSabry0](https://github.com/mohamedSabry0)
+- Twitter: [@mohsmh0](https://twitter.com/mohsmh0)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-sabry0/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
@@ -137,4 +141,3 @@ Acknowledgements and suggestions for improvement are always welcome
 This project is [MIT](https://github.com/AFakhriddinov/School-library-OOP/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
