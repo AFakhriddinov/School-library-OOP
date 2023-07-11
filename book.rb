@@ -11,10 +11,14 @@ class Book
     Rental.new(date, self, person)
   end
 
-  def as_json()
+  def to_json(*args)
     {
-      title: @title,
-      author: @author
-    }
+      JSON.create_id => self.class.name,
+      'a' => [title, author]
+    }.to_json(*args)
+  end
+
+  def self.json_create(object)
+    new(*object['a'])
   end
 end

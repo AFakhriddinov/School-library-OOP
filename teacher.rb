@@ -1,8 +1,14 @@
 require_relative 'person'
 
 class Teacher < Person
-  def initialize(age, specialization, name = 'Unknown', parent_permission = 'true')
-    super(age, name, parent_permission)
+  def initialize(
+    age,
+    specialization,
+    name = 'Unknown',
+    parent_permission = 'true',
+    id = nil
+  )
+    super(age, name, parent_permission, id)
     @specialization = specialization
   end
 
@@ -10,13 +16,14 @@ class Teacher < Person
     true
   end
 
-  def as_json()
+  def to_json(*args)
     {
-      type: Teacher,
-      name: @name,
-      id: @id,
-      age: @age,
-      specialization: @specialization
-    }
+      JSON.create_id => self.class.name,
+      'a' => [@age, @specialization, @name, @parent_permission, @id]
+    }.to_json(*args)
+  end
+
+  def self.json_create(object)
+    new(*object['a'])
   end
 end

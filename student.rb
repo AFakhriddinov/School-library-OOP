@@ -3,8 +3,14 @@ require_relative 'person'
 class Student < Person
   attr_reader :classroom
 
-  def initialize(age, classroom, name = 'Unknown', parent_permission = 'true')
-    super(age, name, parent_permission)
+  def initialize(
+    age,
+    classroom,
+    name = 'Unknown',
+    parent_permission = 'true',
+    id = nil
+  )
+    super(age, name, parent_permission, id)
     @classroom = classroom
   end
 
@@ -17,14 +23,14 @@ class Student < Person
     classroom.students.push(self) unless classroom.students.include?(self)
   end
 
-  def as_json()
+  def to_json(*args)
     {
-      type: Student,
-      name: @name,
-      id: @id,
-      age: @age,
-      classroom: @classroom,
-      parent_permission: @parent_permission
-    }
+      JSON.create_id => self.class.name,
+      'a' => [@age, @classroom, @name, @parent_permission, @id]
+    }.to_json(*args)
+  end
+
+  def self.json_create(object)
+    new(*object['a'])
   end
 end

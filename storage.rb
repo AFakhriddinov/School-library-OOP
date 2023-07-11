@@ -14,23 +14,18 @@ class Storage
   def save_people
     return if @app.people.empty?
 
-    people_json = @app.people.map(&:as_json)
-    File.write('people.json', JSON.dump(people_json))
+    people_json = @app.people.map { |person| JSON.generate(person) }
+    File.write('people.json', people_json)
   end
 
   def load_people
     # handle case when people.json is not available
     return unless File.exist?('people.json')
 
-    people_json = JSON.parse(File.read('people.json'))
-    people_json.each do |person|
-      if person['type'] == 'Student'
-        new_student = Student.new(person['age'], person['classroom'], person['name'], person['parent_permission'])
-        @app.people.push(new_student)
-      else
-        new_teacher = Teacher.new(person['age'], person['specialization'], person['name'])
-        @app.people.push(new_teacher)
-      end
+    people = JSON.parse(File.read('people.json'))
+
+    people.each do |person|
+      @app.people.push(JSON.parse(person, create_additions: true))
     end
   end
 
@@ -49,17 +44,16 @@ class Storage
   def save_books
     return if @app.books.empty?
 
-    books = @app.books.map(&:as_json)
-    File.write('books.json', JSON.dump(books))
+    books = @app.books.map { |book| JSON.generate(book) }
+    File.write('books.json', books)
   end
 
   def load_books
     return unless File.exist?('books.json')
 
-    books = JSON.parse(File.read('books.json'))
-    books.each do |book|
-      new_book = Book.new(book['title'], book['author'])
-      @app.books.push(new_book)
+    books_json = JSON.parse(File.read('books.json'))
+    books_json.each do |book|
+      @app.books.push(JSON.parse(book, create_additions: true))
     end
   end
 
@@ -78,7 +72,7 @@ class Storage
       date = rental['date']
       person = find_person(rental['person_id'])
       book = find_book(rental['book_title'])
-      new_rental = Rental.new(date, book, person[0])
+      new_rental = Rental.new(date, book, person)
       @app.rentals.push(new_rental)
     end
   end
