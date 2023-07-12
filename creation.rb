@@ -17,8 +17,9 @@ module Creation
     end
   end
 
-  def create_teacher(age, specialization, name, permission)
-    @people << Teacher.new(age, specialization, name, permission)
+  def create_teacher(age, name)
+    specialization = get_user_input('Teacher\'s specialization: ')
+    @people << Teacher.new(age, specialization, name, 'true')
     puts 'Teacher created successfully'
   end
 
@@ -36,9 +37,9 @@ module Creation
 
     # when person being created is a teacher
     when 2
-      specialization = get_user_input('Teacher\'s specialization: ')
+
       # create a teacher
-      create_teacher(age, specialization, name, 'true')
+      create_teacher(age, name)
     else
       puts 'Invalid Input! Should be 1 or 2'
     end
