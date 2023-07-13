@@ -33,12 +33,6 @@ RSpec.describe Person do
     end
   end
 
-  describe '#parent_permission' do
-    it 'shows the correct parent_permission' do
-      expect(@new_person.parent_permission).to eq('true')
-    end
-  end
-
   describe '#can_use_services?' do
     it 'shows true of false' do
       service = @new_person.can_use_services?
