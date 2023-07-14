@@ -1,5 +1,5 @@
 require_relative '../student'
-# age, classroom, name = 'Unknown', parent_permission = 'true'
+
 RSpec.describe Student do
   before :each do
     @new_student1 = Student.new(19, '1A', 'Jane Doe')
@@ -54,6 +54,38 @@ RSpec.describe Student do
     it 'returns true if the student is under 18 and has parent permission' do
       service = @new_student4.can_use_services?
       expect(service).to eq(true)
+    end
+  end
+
+  describe '#play_hooky' do
+    it 'returns "¯\(ツ)/¯" if the student can\'t use services' do
+      expect(@new_student3.play_hooky).to eq('¯\(ツ)/¯')
+    end
+
+    it 'returns "¯\(ツ)/¯" if the student can use services' do
+      expect(@new_student1.play_hooky).to eq('¯\(ツ)/¯')
+    end
+  end
+
+  describe '#classroom=' do
+    it 'sets the classroom correctly' do
+      classroom = Classroom.new('2A')
+      @new_student1.classroom = classroom
+      expect(@new_student1.classroom).to eq(classroom)
+    end
+  end
+
+  describe '#to_json' do
+    it 'returns a JSON string' do
+      expect(@new_student1.to_json).to be_a(String)
+    end
+  end
+
+  describe '#json_create' do
+    it 'returns a Student object' do
+      json_string = @new_student1.to_json
+      json_student = JSON.parse(json_string)
+      expect(Student.json_create(json_student)).to be_a(Student)
     end
   end
 end

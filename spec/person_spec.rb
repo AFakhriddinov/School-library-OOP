@@ -46,4 +46,12 @@ RSpec.describe Person do
       expect(name).to eq('Sam')
     end
   end
+
+  describe '#add_rental' do
+    it 'creates a new rental' do
+      book = Book.new('Title', 'Author')
+      rental = @new_person.add_rental('2021-02-01', book)
+      expect(rental).to be_an_instance_of(Rental)
+    end
+  end
 end

@@ -1,4 +1,5 @@
 require_relative '../capitalize_decorator'
+
 describe CapitalizeDecorator do
   let(:capitalize_decorator_obj) { double('testing capitalize', correct_name: 'sam') }
   context 'Testing the capitalize decorator class' do

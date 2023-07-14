@@ -1,5 +1,5 @@
 require_relative '../rental'
-# date, book, person
+
 RSpec.describe Rental do
   let(:mocked_book) { double('Testing Ruby with RSpec', rentals: []) }
   let(:mocked_person) { double('Student', rentals: []) }
