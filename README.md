@@ -8,7 +8,7 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [📖 School-library-OOP ](#-school-library-oop-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -48,7 +48,11 @@ School Library app was built with object-oriented programming principles and all
 
 ### Key Features <a name="key-features"></a>
 
-- Basic set up
+- Add new students or teachers.
+- Add new books.
+- Save records of current books in the library.
+- Save records of current registered students and teachers.
+- Save records of who borrowed a given book and when.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,7 +112,11 @@ N/A
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-Add more dynamic features of ruby on rails
+- Add a feature to remove a book from the library.
+- Add a feature to remove a student or teacher from the library.
+- Add a feature to remove a record of who borrowed a given book and when.
+- Add a feature to update a record of who borrowed a given book and when.
+- Add a feature to show classroom of a student or a specilization of a teacher.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
